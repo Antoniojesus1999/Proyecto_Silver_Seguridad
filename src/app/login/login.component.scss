@@ -1,0 +1,10 @@
+.form-login{
+    display: flex;
+    text-align: center;
+}
+
+form.centrar_placeholder {
+    input::placeholder {
+      text-align: center;
+    }
+  }
