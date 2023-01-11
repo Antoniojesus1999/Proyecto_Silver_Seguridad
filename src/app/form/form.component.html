@@ -1,0 +1,22 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="row g-3" >
+    <div class="form-group ">
+      <label for="nombre">Nombre</label>
+      <input type="nombre" class="form-control" id="nombre" formControlName="nombre" [ngClass]="getValidarNombre()">
+      <div *ngIf="myForm.get('nombre')?.invalid && myForm.get('nombre')?.touched" class="invalid-feedback">
+        El nombre es requerido
+      </div>
+
+      <div *ngIf="myForm.get('nombre')?.errors?.['minlength'] && myForm.get('nombre')?.touched" class="invalid-feedback">
+        El nombre tiene que tener mas de 8 caracteres
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="apellidos">Apellidos</label>
+      <input type="apellidos" class="form-control" id="apellidos" formControlName="apellidos" [ngClass]="getValidarApellidos()">
+      <div *ngIf="myForm.get('apellidos')?.invalid && myForm.get('apellidos')?.touched" class="invalid-feedback">
+        Los apellidos son requeridos
+      </div>
+    </div>
+    <button [disabled]="myForm.invalid" type="submit" class="btn btn-primary">Enviar datos</button>
+  </form>
+
