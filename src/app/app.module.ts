@@ -10,7 +10,6 @@ import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './services/auth-guard';
 import { FirmaComponent } from './firma/firma.component';
-import { SignaturePadModule } from 'ngx-signaturepad';
 
 @NgModule({
   declarations: [
@@ -24,8 +23,7 @@ import { SignaturePadModule } from 'ngx-signaturepad';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule,
-    SignaturePadModule
+    FormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
