@@ -29,6 +29,22 @@ export class FormComponent{
     this.render();
   }
   
+  onSubmit():void{
+      
+    if(this.canvasRef) {
+      let canvasEl = this.canvasRef.nativeElement;
+      // Obtener la imagen en formato base64
+      const imageData = canvasEl.toDataURL();
+      // Crear el cuerpo de la solicitud
+      const body = {
+        firma: imageData,
+        nombre:"Antonio",
+        apellido:"Ponce Vela"
+      };
+      this.formService.sendPost(body);
+    }
+   
+  }
   private render():any{
     const canvasEl = this.canvasRef.nativeElement;
     console.log(canvasEl);
@@ -130,22 +146,7 @@ onTouchEnd = (e:any) =>{
   public clearCanvas(){
     this.cx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
   }
-    onSubmit():void{
-      
-      if(this.canvasRef) {
-        let canvasEl = this.canvasRef.nativeElement;
-        // Obtener la imagen en formato base64
-        const imageData = canvasEl.toDataURL();
-        // Crear el cuerpo de la solicitud
-        const body = {
-          image: imageData.split(',')[1],
-          nombre:"Antonio",
-          apellido:"Ponce Vela"
-        };
-        this.formService.sendPost(body);
-      }
-     
-    }
+    
 
 
     getValidarNombre() {
