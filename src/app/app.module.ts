@@ -10,6 +10,7 @@ import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './services/auth-guard';
 import { FirmaComponent } from './firma/firma.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FirmaComponent } from './firma/firma.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule 
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
