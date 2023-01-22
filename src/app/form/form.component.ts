@@ -1,4 +1,5 @@
 
+import { ViewportScroller } from '@angular/common';
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormService } from './form.service';
@@ -13,8 +14,8 @@ export class FormComponent{
   @ViewChild('canvasRef', { static: false }) canvasRef: any;
   private cx: CanvasRenderingContext2D;
    isDrawing = false;
-   canvasWidth = 600;
-   canvasHeight = 500;
+   canvasWidth = 400;
+   canvasHeight =500;
    private points: Array<any> = [];
 
 

@@ -1,10 +1,51 @@
 .canvas-border{
     background-color: white;
     border: 1px solid;
+    display: flex;
   }
 
-  .div-canvas{
-    background-color:  red;
-    height: 800px;
+
+  .btn-limpiar{
+    margin-top: 15px;
   }
-  
+  @media (max-width: 416px) {
+    .form-control {
+         font-size: 12px;
+     }
+     .canvas-border{
+         width: 300px;
+         height:300px;
+     }
+     .btn-limpiar{
+         font-size: 12px;
+     }
+    
+ }
+
+ @media (max-width: 304px) {
+    .form-control {
+         font-size: 9px;
+     }
+     .canvas-border{
+         width: 250px;
+         height:250px;
+     }
+     .btn-limpiar{
+         font-size: 9px;
+     }
+    
+ }
+
+ @media (max-width: 260px) {
+    .form-control {
+         font-size: 6px;
+     }
+     .canvas-border{
+         width: 250px;
+         height:250px;
+     }
+     .btn-limpiar{
+         font-size: 6px;
+     }
+    
+ }
